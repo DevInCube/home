@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -8,12 +9,53 @@
   <meta name="description" content="Про мене">
   <meta name="author" content="Ruslan Hadyniak">
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <!-- production version, optimized for size and speed -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
 </head>
 
 <body>
-  <h1>Про мене</h1>
+  <div id="app" class="container" vue-cloak>
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Про мене</h1>
+        <img :src="profileImage" alt="My photo" class="img-circle">
+      </div>
+      <div class="col-md-8">
+        <h1>Посилання</h1>
+        <div class="row" v-for="link in links">
+          <div class="col-md-12">
+            <div class="media">
+              <div class="media-left">
+                <a :href="link.url">
+                  <img class="media-object" :src="link.image" :alt="link.title">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a :href="link.url">{{link.title}}</a></h4>
+                <p>{{link.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
