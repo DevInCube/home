@@ -32,17 +32,25 @@
   <div id="app" class="container" vue-cloak>
     <div class="row">
       <div class="col-md-4">
-        <h1>Про мене</h1>
-        <img :src="profileImage" alt="My photo" class="img-circle">
+        <h2>Про мене</h2>
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object img-circle" :src="profile.image" alt="My photo" height="64">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{profile.fullname}}</h4>
+            <p>{{profile.description}}</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-8">
-        <h1>Посилання</h1>
+        <h2>Посилання</h2>
         <div class="row" v-for="link in links">
           <div class="col-md-12">
             <div class="media">
               <div class="media-left">
                 <a :href="link.url">
-                  <img class="media-object" :src="link.image" :alt="link.title">
+                  <img class="media-object" :src="link.image" :alt="link.title" height="32">
                 </a>
               </div>
               <div class="media-body">
