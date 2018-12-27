@@ -12,7 +12,7 @@ const mylinks = [
         `https://instagram.com/rhadyniak`, `https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png`,
         `Мої фото та історії`),
     new Link(`SoundCloud`,
-        `https://soundcloud.com/rhadyniak`, `http://mfml.org/wp-content/uploads/2018/04/soundcloud-icon.png`,
+        `https://soundcloud.com/rhadyniak`, `http://icons.iconarchive.com/icons/xenatt/the-circle/256/App-Soundcloud-icon.png`,
         `Слухаю хорошу музику`),
     new Link(`LinkedIn`,
         `https://www.linkedin.com/in/ruslan-hadyniak-9b585479/`, `https://i1.wp.com/www.adcolony.com/wp-content/uploads/2017/09/linked-in-logo@2x-1.png?fit=588%2C588&ssl=1`,
